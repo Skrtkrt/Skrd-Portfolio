@@ -5,6 +5,73 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skrd Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Inline styles for example (can be moved to external file) -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .loading {
+        display: flex;
+        justify-content: space-around;
+        width: 50px;
+      }
+      
+      .circle {
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+        animation: bounce 1.2s infinite;
+      }
+      
+      .circle:nth-child(1) {
+        animation-delay: 0s;
+      }
+      
+      .circle:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      
+      .circle:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      
+      .hidden {
+        display: none;
+      }
+      
+      .section {
+        padding: 40px;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body class="light-theme">
     <div class="experience">
@@ -21,175 +88,110 @@
         </div>
       </div>
     </div>
-    <div class="page" asscroll-container>
-      <div class="page-wrapper" asscroll>
-        
+    
+    <div class="page">
+      <div class="page-wrapper">
         <section class="hero">
           <div class="hero-wrapper">
-
- 
-
             <div class="arrow-svg-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="currentColor" d="m440-472-36-36q-11-11-28-11t-28 11q-11 11-11 28t11 28l104 104q12 12 28 12t28-12l104-104q11-11 11-28t-11-28q-11-11-28-11t-28 11l-36 36v-128q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600v128Zm40 392q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
             </div>
             <div class="hero-main">
               <h1 class="hero-main-title">Kurt Russel D. Sison</h1>
               <p class="hero-main-description">Bachelor of Science In Computer Engineering</p>
-
             </div>
-
             <div class="hero-second">
               <p class="hero-second-subheading first-sub">o   o</p>
               <p class="hero-second-subheading second-sub">___</p>
             </div>
-
           </div>
         </section>
 
-        <div class="first-move section-margin"></div>
-
         <section class="first-section section left">
-
           <div class="progress-wrapper progress-bar-wrapper-left">
             <div class="progress-bar green-background"></div>
           </div>
-
           <div class="section-intro-wrapper">
             <span class="section-title-text">About Me</span>
-
-            
             <span class="section-number">01</span>
-        </div>
-
+          </div>
           <div class="section-detail-wrapper first-section-detail-wrapper">
             <h3 class="section-heading">Welcome!</h3>
-            <p class="section-text"> I’m Kurt Russel D. Sison, a 21-year-old Computer Engineering student at Don Honorio Ventura State University. 
-              I’m passionate about creating technology solutions that combine both software and hardware. I live in Barangay Bulaon, 
-              City of San Fernando, Pampanga. I’m always learning new skills to bring my ideas to life and contribute to the tech field.</p>
-
-              <h2 class="section-heading">Skills</h2>
-              <ul class="section-text">
-                  <li>Front-End Technologies: HTML, CSS, JavaScript, React, Bootstrap</li>
-                  <li>Back-End Technologies: Node.js</li>
-                  <li>Databases: MongoDB, MySQL</li>
-                  <li>Deployment Platforms and Version Control: Git</li>
-                  <li>The ability to perform advanced CPR!</li>
-                  <li>The ability to perform Guitar Instrument</li>
-              </ul>
-      
-              <h2 class="section-heading">Project Made Title</h2>
-              <ul class="section-text">
-                  <li>Calculator</li>
-                  <li>Enrollment System Website</li>
-                  <li>Layered by Ingrid Ordering Page Website</li>
-                  <li>Notepad Application</li>
-                  <li>Ascii Converter Calculator Application</li>
-                  <li>Flappy Bird App Copyright</li>
-              </ul>
-
+            <p class="section-text"> I’m Kurt Russel D. Sison, a 21-year-old Computer Engineering student at Don Honorio Ventura State University. I’m passionate about creating technology solutions that combine both software and hardware. I live in Barangay Bulaon, City of San Fernando, Pampanga. I’m always learning new skills to bring my ideas to life and contribute to the tech field.</p>
+            <h2 class="section-heading">Skills</h2>
+            <ul class="section-text">
+              <li>Front-End Technologies: HTML, CSS, JavaScript, React, Bootstrap</li>
+              <li>Back-End Technologies: Node.js</li>
+              <li>Databases: MongoDB, MySQL</li>
+              <li>Deployment Platforms and Version Control: Git</li>
+              <li>The ability to perform advanced CPR!</li>
+              <li>The ability to perform Guitar Instrument</li>
+            </ul>
+            <h2 class="section-heading">Project Made Title</h2>
+            <ul class="section-text">
+              <li>Calculator</li>
+              <li>Enrollment System Website</li>
+              <li>Layered by Ingrid Ordering Page Website</li>
+              <li>Notepad Application</li>
+              <li>Ascii Converter Calculator Application</li>
+              <li>Flappy Bird App Copyright</li>
+            </ul>
             <p class="section-text">Scroll down to view some of my highlighted projects I've worked on (: </p>
-          
           </div>
-
         </section>
-
-
-        <div class="second-move section-margin"></div>
 
         <section class="second-section section right">
           <div class="progress-wrapper progress-bar-wrapper-right">
             <div class="progress-bar blue-background"></div>
           </div>
-
-
           <div class="section-intro-wrapper blue-text blue-border">
             <span class="section-title-text blue-text">My Work</span>
-
             <span class="section-number blue-text">02</span>
-            <div class="section-detail-wrapper second-section-detail-wrapper">
-              <h3 class="section-heading">St-Agnes</h3>
-              <p class="section-text">TinySt. Agness Resort is an interactive platform designed to help guests explore and book accommodations at a beautiful resort. 
-                The website allows users to browse various room options, view detailed pricing information,
-                 and access high-quality images of the resort’s amenities and accommodations. Through an easy-to-use email reservation system,
-                  guests can book their stay directly with personalized assistance from the resort’s team.</p>
-                <p class="section-text"></b>There will be more Project will be Uploaded Soon</p>
-
-              <!-- Play Example Button -->
-              <button class="tinysquares example-btn play-btn">Pre-view</button>
-          
-              <!-- GitHub Repo Link (styled as a button) -->
-              <a href="https://github.com/Skrtkrt/St-Agnes-WebDev" class="example-btn" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-          
-              <!-- Live Demo Link (styled as a button) -->
-              <a href="https://skrtkrt.github.io/St-Agnes-WebDev/" class="example-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          
-              <h3 class="section-heading">Certificate</h3>
-              <p class="section-text">This certificate is awarded to me upon successful attendance of a webinar or seminar. 
-                It serves as official recognition of my participation, typically including my name, the event title, date, 
-                and organizer details. The certificate can be used for personal records or as proof of professional development.</p>
-              <p class="section-text"><b>Certificate</b> </p>
-          
-              <!-- Play Example Button for Name -->
-              <button class="nomad-nebula example-btn play-btn">View Certificate</button>
-          
           </div>
-          
+          <div class="section-detail-wrapper second-section-detail-wrapper">
+            <h3 class="section-heading">St-Agnes</h3>
+            <p class="section-text">TinySt. Agness Resort is an interactive platform designed to help guests explore and book accommodations at a beautiful resort. The website allows users to browse various room options, view detailed pricing information, and access high-quality images of the resort’s amenities and accommodations. Through an easy-to-use email reservation system, guests can book their stay directly with personalized assistance from the resort’s team.</p>
+            <p class="section-text"><b>There will be more Project will be Uploaded Soon</b></p>
+            <button class="tinysquares example-btn play-btn">Pre-view</button>
+            <a href="https://github.com/Skrtkrt/St-Agnes-WebDev" class="example-btn" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            <a href="https://skrtkrt.github.io/St-Agnes-WebDev/" class="example-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
         </section>
 
-
-        <div class="third-move section-margin"></div>
-
         <section class="third-section section left">
-
           <div class="progress-wrapper progress-bar-wrapper-left">
             <div class="progress-bar green-background"></div>
           </div>
-
-
           <div class="section-intro-wrapper green-text green-border">
             <span class="section-title-text green-text">Contact Me</span>
-
             <span class="section-number green-text">03</span>
-        </div>
-
+          </div>
           <div class="section-detail-wrapper">
-           
             <p class="section-text">You can find me on:</p>
             <ul class="contact-list">
               <li class="section-text"><a href="https://www.facebook.com/kurtrussel.d.sison/">Facebook</a></li>
               <li class="section-text"><a href="https://github.com/Skrtkrt">GitHub</a></li>
-              <li class="section-text">Contact me by email: <a href="mailto:kurtsison137@gmail.com">Kurtsison137@gmail.com</a></li>
+              <li class="section-text">Contact me by email: <span class="highlight-text">kurt.russel.sison@gmail.com</span></li>
+              <li class="section-text">Contact Number: <span class="highlight-text">+63 925 585 7872</span></li>
             </ul>
-
-            <p class="section-text">You can also use the form below to get in touch. Hope to chat soon! :)</p>
-
-            <h3 class="section-heading contact-form">Let's connect!</h3>
-            <form ref="form" @submit.prevent="sendEmail">
-              <div class="contact-blank hidden"></div>
-              <label for="user_name">Name</label>
-              <input type="text" id="user_name" name="user_name">
-              <label for="user_email">Email</label>
-              <input type="email" id="user_email" name="user_email">
-              <label for="message">Message</label>
-              <textarea id="message" name="message"></textarea>
-              <input type="submit" value="Send">
-              <div class="thank-you-message hidden">Thank you for your message!</div>
-            </form>
           </div>
-
-        
- 
-          <div class="section-text credit">Website inspired by: <a href="https://www.facebook.com/vrgrkrstn">Kristine M. Vergara</a></div>
-
         </section>
-
-    
-
-    
-
-
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
+
+    <!-- Footer (optional) -->
+    <footer>
+      <p>Copyright © 2024 Kurt Russel D. Sison</p>
+    </footer>
+
+    <!-- Include JavaScript -->
+    <script src="main.js"></script>
+
+    <script>
+      // Hide preloader once the page is fully loaded
+      window.addEventListener('load', () => {
+        document.querySelector('.preloader').style.display = 'none';
+      });
+    </script>
   </body>
 </html>
